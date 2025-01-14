@@ -1,11 +1,13 @@
 const sequelize = require('../config/config');
 const Cliente = require('./cliente');
+const Compra = require('./compra');
 
-// Aquí se sincronizan los modelos con la base de datos
-sequelize.sync().then(() => {
-  console.log('Modelos sincronizados con la base de datos');
-}).catch((error) => {
-  console.error('Error al sincronizar los modelos:', error);
-});
+// Relaciones
+Cliente.hasMany(Compra, { foreignKey: 'cliente_id', as: 'compras' });
+Compra.belongsTo(Cliente, { foreignKey: 'cliente_id', as: 'cliente' });
 
-module.exports = { Cliente };
+module.exports = {
+  sequelize,
+  Cliente,
+  Compra,
+};

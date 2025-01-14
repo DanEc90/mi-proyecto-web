@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes - SENCILLO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Clientes - SENCILLO</h1>
+
+    <section>
+        <h2>Crear Cliente</h2>
+        <form id="createClientForm">
+            <input type="text" id="nombres" placeholder="Nombres" required>
+            <input type="text" id="apellidos" placeholder="Apellidos" required>
+            <input type="text" id="identificacion" placeholder="Cédula o RUC" required>
+            <input type="tel" id="telefono" placeholder="Teléfono" required>
+            <input type="text" id="direccion" placeholder="Dirección" required>
+            <input type="email" id="correo_electronico" placeholder="Correo electrónico" required>            
+            <button type="submit">Crear Cliente</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Lista de Clientes</h2>
+        <table id="clientsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Cédula o RUC</th>
+                    <th>Teléfono</th>
+                    <th>Dirección</th>
+                    <th>Correo</th>
+                    <th>Fecha Registro</th>
+                    <th>Habilitado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se mostrarán los clientes -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

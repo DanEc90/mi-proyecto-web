@@ -35,14 +35,15 @@ const Cliente = sequelize.define('Cliente', {
   },
   habilitado: {
     type: DataTypes.BOOLEAN,
-    defaultValue: true, // Por defecto, todos los clientes están habilitados
+    defaultValue: true,
   },
   fecha_registro: {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW,
-  }
+  },
 }, {
   timestamps: false,
 });
 
 module.exports = Cliente;
+
